@@ -45,12 +45,8 @@ const departmentColors: Record<string, string> = {
 
 function useCountUp(target: number, duration = 1200, delay = 0) {
   const [count, setCount] = useState(0);
-  const startedRef = useRef(false);
 
   useEffect(() => {
-    if (startedRef.current) return;
-    startedRef.current = true;
-
     let raf: number;
     const start = performance.now() + delay;
 
